@@ -23,8 +23,28 @@ body{
 #titulo{
     padding-top: 10px;
     color: #e5e6e4;
+    transition: ease;
+    transition-duration: 2s;
+    transition-delay: 0s;
+    animation-name: anima;
+    animation-duration: 6s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
 }
-
+@keyframes anima{
+    0%{color: white;}
+    25%{color: #407ba7;}
+    50%{color: white;}
+    75%{color: #407ba7;}
+    100%{color: white;}
+}
+#titulo:hover{
+    transform: scale(1.2);
+}
 .menu ul{
     margin: 0px;
     display: flex;
@@ -69,7 +89,6 @@ header{
 }
 #site{
     text-decoration: none;
-    color: #002962;
 }
 article{
     background-color: #e5e6e4;
@@ -84,6 +103,12 @@ main{
 margin-left: 150px;
 margin-right: 150px;
 }
-
-
-
+#site :link{
+    color: #002962;
+}
+#site:visited{
+    color: #407ba7;
+}
+#site :active{
+    color: #407ba7;
+}
